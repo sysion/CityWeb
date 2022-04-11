@@ -5,7 +5,7 @@
 }
 
 html{
-	font-family: arial, sans-serif, tahoma, helvetica, verdana;
+	font-family: 'Opensans', arial, sans-serif, tahoma, helvetica, verdana;
 	font-size: 62.5%;
 }
 
@@ -131,12 +131,16 @@ nav ul li a{
 	margin-top: 2rem;
 }
 
-.home .red{
-	color: rgba(217, 12, 17, 0.6);
+.home__info h1{
+	color: #ffffff;
 }
 
-.home .blue{
-	color: rgba(12, 17, 217, 0.6);
+.home__info .red{
+	color: red;                         /* rgba(217, 12, 17, 0.6); */
+}
+
+.home__info .blue{
+	color: blue;                        /* rgba(12, 17, 217, 0.6); */
 }
 
 .home__image{
@@ -146,7 +150,7 @@ nav ul li a{
 
 .services{
 	font-size: 2rem;
-	margin-top: 4rem;
+	margin-top: 2rem;
 }
 
 .services__info__image{
@@ -286,6 +290,7 @@ nav ul li a{
 .social__icon a{
 	margin: 1rem;
 	padding: 1rem;
+	color: #ffffff;
 }
 
 .site__footer p{
@@ -377,6 +382,10 @@ nav ul li a{
 		right: 15%;
 	}
 
+	.services{
+		margin-top: 4rem;
+	}
+
 	.services__info__image{
 		display: flex;
 		flex-direction: row;
@@ -450,3 +459,5 @@ nav ul li a{
 	}
 
 }
+
+/* invert css font-color depending on background-color => stackoverflow */ 
