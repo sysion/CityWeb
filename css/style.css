@@ -82,7 +82,7 @@ nav{
 	width: 75%;
 	height: 100%;
 	border-top-right-radius: 1rem;
-	/*background-color: #341768;*/
+	background-color: rgba(87, 87, 87, 0.75);     /* #341768 */
 	transition: 0.7s;
 }
 
@@ -96,6 +96,13 @@ nav ul li{
 
 nav ul li:last-child{
 	border-bottom: none;
+}
+
+nav ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: rgba(255, 255, 255, 0.7);
 }
 
 
@@ -286,6 +293,10 @@ nav ul li:last-child{
 	color: #ffffff;    /* rgba(240, 241, 242, 0.8) */
 }
 
+.show__menu{
+	left: 0;
+}
+
 
 /*=== MEDIA QUERY - 576px ===*/
 @media screen and (min-width: 576px) {
@@ -316,6 +327,7 @@ nav ul li:last-child{
 		top: 0;          /* 1rem */
 		left: 0; 						/* reset left: -100%; in mobile ui/ux */
 		border-top-right-radius: 0; 	/* reset border-top-right-radius: 1rem; in mobile ui/ux */
+		background-color: #ffffff;      /* reset background-color: rgba(87, 87, 87, 0.75); in mobile ui/ux */
 		transition: none;
 		display: flex;
 		flex-direction: row;
@@ -331,19 +343,19 @@ nav ul li:last-child{
 	}
 
 	.site__header nav ul li{
-		margin: 1rem;          /* reset margin: 2rem 1rem; in mobile ui/ux */
+		margin: 1rem;                   /* reset margin: 2rem 1rem; in mobile ui/ux */
 		padding: 1rem;
 		flex: 1 1 250px;
 		align-self: center;
 		border-bottom: none;
 	}
 
-	.site__header nav ul li a:hover{
-		border-bottom: 0.2rem solid red;
+	.site__header nav ul li a{
+		color: rgba(0, 0, 0, 0.7);      /* reset color: rgba(255, 255, 255, 0.7); in mobile ui/ux */
 	}
 
-	.active{
-		border-bottom: 0.3rem solid green;
+	.site__header nav ul li a:hover{
+		border-bottom: 0.2rem solid red;
 	}
 
 	.site__content{
@@ -431,6 +443,10 @@ nav ul li:last-child{
 
 	.contact__form input[type=button]{
 		margin: 0 2rem 0 auto;
+	}
+
+	.active__menu{
+		border-bottom: 0.3rem solid green;
 	}
 
 }
