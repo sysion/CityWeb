@@ -1,6 +1,8 @@
 const nav = document.querySelector('nav');
 const toggleMenu = document.querySelector('.toggle__menu');
 const navLinkItems = document.querySelectorAll('nav ul li a');
+const contactForm = document.querySelector('.contact__form');
+const contactSubmit = document.querySelector('#submit');
 
 //show/hide mobile menu
 toggleMenu.addEventListener('click', function(){
@@ -21,3 +23,23 @@ navLinkItems.forEach(function(navItem){
 		this.classList.add('active__menu');
 	});
 });
+
+
+function submitMessage(){
+	let formData = {};
+	let contactInputs = contactForm.querySelectorAll('.contact__input');
+
+	contactInputs.forEach(function(inp){
+		formData[inp.name] = inp.value;
+		console.log("inp.name => "+inp.name+", inp.value => "+inp.value);
+	});
+	console.log("formData.name => "+formData.name);
+	contactInputs.forEach(function(inp){
+		inp.value = '';
+	});
+}
+
+//contactSubmit.addEventListener('click', submitMessage);  	//ok
+contactForm.addEventListener('submit', submitMessage);
+
+//https://www.cssscript.com/10-best-smooth-scroll-javascript-plugins/

@@ -133,10 +133,6 @@ nav ul li a{
 	font-size: 3.2rem;    /* 32px */
 }
 
-:target{
-	padding-top: 6rem;
-}
-
 .home{
 	margin-top: 2rem;
 }
@@ -168,7 +164,6 @@ nav ul li a{
 }
 
 .services__image{
-	display: block;
 	border-radius: 1rem;
 	overflow: hidden;
 }
@@ -236,7 +231,6 @@ nav ul li a{
 }
 
 .about__image{
-	display: block;
 	border-radius: 1rem;
 	overflow: hidden;
 }
@@ -288,6 +282,30 @@ nav ul li a{
 	box-shadow: none;
 }
 
+
+/*
+.contact__form input[type=submit]{
+	font-weight: bold;
+}
+
+.contact__form input[type=submit]{
+	display: block;
+	width: 20rem;
+	margin: 0 auto 2rem auto;
+	border: none;
+	color: #ffffff;
+	cursor: pointer;
+	background-color: rgba(15, 14, 255, 0.7);
+}
+
+.contact__form input[type=submit]:focus{
+	outline: none;
+	box-shadow: none;
+}
+*/
+
+
+
 .contact__form textarea{
 	width: 100%;
 	margin-bottom: 2rem;
@@ -329,16 +347,12 @@ nav ul li a{
 }
 
 
-
-
 /*=== MEDIA QUERY - 576px ===*/
 @media screen and (min-width: 576px) {
 	/* 576, 768, 968, 992 */
 }
 
-
-/*=== MEDIA QUERY - 768px ===*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
 	.site__header{
 		width: 100%;
 		display: flex;
@@ -346,6 +360,9 @@ nav ul li a{
 		position: fixed;
 		top: 0;
 		left: 0;
+
+
+		/*background-color: #674593;*/
 		height: 6rem;
 	}
 
@@ -394,12 +411,20 @@ nav ul li a{
 		border-bottom: 0.2rem solid red;
 	}
 
-	/*:target{
+	.site__content{
+	
+	}
+
+	:target{
 		padding-top: 6rem;
-	}*/
+	}
 
 	.home{
 		position: relative;
+	}
+
+	.home__image{
+		
 	}
 
 	.home__info{
@@ -413,17 +438,16 @@ nav ul li a{
 		color: #ffffff;
 	}
 
-	/* BREAK here to serve all higher width */
-
 	.services{
 		margin-top: 4rem;
-		font-size: 1.6rem;
 	}
 
 	.services__info__image{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+
+
 		align-content: center;
 	}
 
@@ -435,16 +459,11 @@ nav ul li a{
 	}
 
 	.services__info p{
-		margin: 1rem 0;
+		/*margin-top: 6rem;*/
 	}
 
 	.services__info ul{
 		margin-left: 4rem;
-		font-size: 1.6rem;
-	}
-
-	.services__info ul li{
-		margin-bottom: 1rem;
 	}
 
 	.gallery ul{
@@ -462,10 +481,6 @@ nav ul li a{
 		margin: 2rem;
 	}
 
-	.about{
-		font-size: 1.6rem;
-	}
-
 	.about__image__info{
 		display: flex;
 		flex-direction: row;
@@ -487,7 +502,7 @@ nav ul li a{
 	}
 
 	.contact{
-		width: 500px;
+		width: 40%;
 		margin: 0 auto;
 	}
 
@@ -504,78 +519,3 @@ nav ul li a{
 /************************************************************************/
 /* invert css font-color depending on background-color => stackoverflow */
 /************************************************************************/
-
-/*=== MEDIA QUERY - 1024px ===*/
-@media screen and (min-width: 1024px) {
-	.services{
-		margin-top: 4rem;
-		font-size: 2rem;
-	}
-
-	.services__info__image{
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-
-
-		align-content: center;
-	}
-
-	.services__item{
-		/* flex-grow: 1(grow), flex-shrink: 0(don't shrink), flex-basis: 28%(each flex-item width is 28%) 
-		   hence only 3 items per row because 28x3=84% and wrapper width is 96% i.e. difference is only 12% */
-		flex: 1 0 28%;  
-		margin: 2rem;
-	}
-
-	.services__info p{
-		/*margin-top: 6rem;*/
-	}
-
-	.services__info ul{
-		margin-left: 4rem;
-		font-size: 2rem;
-	}
-
-	.services__info ul li{
-		margin-bottom: 2rem;
-	}
-
-	.about{
-		font-size: 2rem;
-	}
-
-	.about__image__info{
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-
-
-		align-content: center;
-	}
-
-	.about__item{
-		/* flex-grow: 1(grow), flex-shrink: 0(don't shrink), flex-basis: 28%(each flex-item width is 28%) 
-		   hence only 3 items per row because 28x3=84% and wrapper width is 96% i.e. difference is only 12% */
-		flex: 1 0 28%;  
-		margin: 2rem;
-	}
-
-	.about__info{
-		/*margin-top: 6rem;*/
-	}
-
-	.contact{
-		width: 700px;
-		margin: 0 auto;
-	}
-
-	.contact__form input[type=button]{
-		margin: 0 2rem 0 auto;
-	}
-
-	.active__menu{
-		border-bottom: 0.3rem solid green;
-	}
-
-}

@@ -133,10 +133,6 @@ nav ul li a{
 	font-size: 3.2rem;    /* 32px */
 }
 
-:target{
-	padding-top: 6rem;
-}
-
 .home{
 	margin-top: 2rem;
 }
@@ -288,6 +284,30 @@ nav ul li a{
 	box-shadow: none;
 }
 
+
+/*
+.contact__form input[type=submit]{
+	font-weight: bold;
+}
+
+.contact__form input[type=submit]{
+	display: block;
+	width: 20rem;
+	margin: 0 auto 2rem auto;
+	border: none;
+	color: #ffffff;
+	cursor: pointer;
+	background-color: rgba(15, 14, 255, 0.7);
+}
+
+.contact__form input[type=submit]:focus{
+	outline: none;
+	box-shadow: none;
+}
+*/
+
+
+
 .contact__form textarea{
 	width: 100%;
 	margin-bottom: 2rem;
@@ -346,6 +366,9 @@ nav ul li a{
 		position: fixed;
 		top: 0;
 		left: 0;
+
+
+		/*background-color: #674593;*/
 		height: 6rem;
 	}
 
@@ -394,9 +417,9 @@ nav ul li a{
 		border-bottom: 0.2rem solid red;
 	}
 
-	/*:target{
+	:target{
 		padding-top: 6rem;
-	}*/
+	}
 
 	.home{
 		position: relative;
@@ -424,6 +447,8 @@ nav ul li a{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+
+
 		align-content: center;
 	}
 
@@ -445,21 +470,6 @@ nav ul li a{
 
 	.services__info ul li{
 		margin-bottom: 1rem;
-	}
-
-	.gallery ul{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.gallery ul li{
-		/* flex-grow: 1(grow), flex-shrink: 1(shrink), flex-basis: 28%(each flex-item width is 28%) 
-		   hence only 3 items per row because 28x3=84% and wrapper width is 96% i.e. difference is only 12% */
-		flex: 1 1 28%;  
-		margin: 2rem;
 	}
 
 	.about{
@@ -507,6 +517,91 @@ nav ul li a{
 
 /*=== MEDIA QUERY - 1024px ===*/
 @media screen and (min-width: 1024px) {
+	.site__header{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		position: fixed;
+		top: 0;
+		left: 0;
+
+
+		/*background-color: #674593;*/
+		height: 6rem;
+	}
+
+	.site__logo{
+		margin: 1rem auto 1rem 1rem;   /* top right bottom left => right: auto; help to push nav to the right */
+		padding: 1rem;
+	}
+
+	.site__toggle__menu{
+		display: none;
+	}
+
+	nav{
+		position: relative;
+		top: 0;          /* 1rem */
+		left: 0; 						/* reset left: -100%; in mobile ui/ux */
+		border-top-right-radius: 0; 	/* reset border-top-right-radius: 1rem; in mobile ui/ux */
+		background-color: #ffffff;      /* reset background-color: rgba(87, 87, 87, 0.75); in mobile ui/ux */
+		transition: none;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		margin-right: 4rem;
+	}
+
+	.site__header nav ul{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-content: center;
+	}
+
+	.site__header nav ul li{
+		margin: 1rem;                   /* reset margin: 2rem 1rem; in mobile ui/ux */
+		padding: 1rem;
+		flex: 1 1 250px;
+		align-self: center;
+		border-bottom: none;
+	}
+
+	.site__header nav ul li a{
+		color: rgba(0, 0, 0, 0.7);      /* reset color: rgba(255, 255, 255, 0.7); in mobile ui/ux */
+	}
+
+	.site__header nav ul li a:hover{
+		border-bottom: 0.2rem solid red;
+	}
+
+	.site__content{
+	
+	}
+
+	:target{
+		padding-top: 6rem;
+	}
+
+	.home{
+		position: relative;
+	}
+
+	.home__image{
+		
+	}
+
+	.home__info{
+		position: absolute;
+		top: 25%;
+		left: 10%;                      /* 15% */
+		right: 10%;                     /* 15% */
+	}
+
+	.home__info h1{
+		color: #ffffff;
+	}
+
 	.services{
 		margin-top: 4rem;
 		font-size: 2rem;
@@ -539,6 +634,21 @@ nav ul li a{
 
 	.services__info ul li{
 		margin-bottom: 2rem;
+	}
+
+	.gallery ul{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.gallery ul li{
+		/* flex-grow: 1(grow), flex-shrink: 1(shrink), flex-basis: 28%(each flex-item width is 28%) 
+		   hence only 3 items per row because 28x3=84% and wrapper width is 96% i.e. difference is only 12% */
+		flex: 1 1 28%;  
+		margin: 2rem;
 	}
 
 	.about{
