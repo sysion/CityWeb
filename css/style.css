@@ -11,7 +11,7 @@ html{
 
 body{
 	font-size: 1.6rem;
-	color: rgba(128, 128, 128, 0.85);     /* color: rgba(66, 66, 66, 0.5); */
+	color: rgba(128, 128, 128, 0.85);
 }
 
 a{
@@ -84,11 +84,11 @@ img{
 nav{
 	position: fixed;
 	top: 4rem;
-	left: -100%;     /* left: -100%; to hide and left: 0; to show */
+	left: -100%;
 	width: 75%;
 	height: 100%;
 	border-top-right-radius: 1rem;
-	background-color: rgba(87, 87, 87, 0.75);     /* #341768 */
+	background-color: rgba(87, 87, 87, 0.75);
 	transition: 0.7s;
 }
 
@@ -130,7 +130,7 @@ nav ul li a{
 }
 
 .site__content section h2{
-	font-size: 3.2rem;    /* 32px */
+	font-size: 3.2rem;
 }
 
 :target{
@@ -146,11 +146,11 @@ nav ul li a{
 }
 
 .home__info .red{
-	color: red;                         /* rgba(217, 12, 17, 0.6); */
+	color: red;                  
 }
 
 .home__info .blue{
-	color: blue;                        /* rgba(12, 17, 217, 0.6); */
+	color: blue;                     
 }
 
 .home__image{
@@ -294,7 +294,7 @@ nav ul li a{
 	padding: 1rem;
 	border-radius: 0.5rem;
 	border: 0.1rem solid rgba(128, 128, 128, 0.45);
-	resize: none;   /* disable the resizable property of a textarea */
+	resize: none;
 }
 
 
@@ -304,7 +304,7 @@ nav ul li a{
 	margin-top: 4rem;
 	padding: 2rem;
 	text-align: center;
-	background-color: rgba(128, 128, 128, 0.45);           /* rgba(157, 142, 139, 0.7) */
+	background-color: rgba(128, 128, 128, 0.45);      
 }
 
 .social__icon{
@@ -321,7 +321,7 @@ nav ul li a{
 
 .site__footer p{
 	font-weight: bold;
-	color: #ffffff;    /* rgba(240, 241, 242, 0.8) */
+	color: #ffffff; 
 }
 
 .show__menu{
@@ -350,7 +350,7 @@ nav ul li a{
 	}
 
 	.site__logo{
-		margin: 1rem auto 1rem 1rem;   /* top right bottom left => right: auto; help to push nav to the right */
+		margin: 1rem auto 1rem 1rem; 
 		padding: 1rem;
 	}
 
@@ -360,10 +360,10 @@ nav ul li a{
 
 	nav{
 		position: relative;
-		top: 0;          /* 1rem */
-		left: 0; 						/* reset left: -100%; in mobile ui/ux */
-		border-top-right-radius: 0; 	/* reset border-top-right-radius: 1rem; in mobile ui/ux */
-		background-color: #ffffff;      /* reset background-color: rgba(87, 87, 87, 0.75); in mobile ui/ux */
+		top: 0;         
+		left: 0; 						
+		border-top-right-radius: 0; 	
+		background-color: #ffffff;      
 		transition: none;
 		display: flex;
 		flex-direction: row;
@@ -379,7 +379,7 @@ nav ul li a{
 	}
 
 	.site__header nav ul li{
-		margin: 1rem;                   /* reset margin: 2rem 1rem; in mobile ui/ux */
+		margin: 1rem;                   
 		padding: 1rem;
 		flex: 1 1 250px;
 		align-self: center;
@@ -387,16 +387,12 @@ nav ul li a{
 	}
 
 	.site__header nav ul li a{
-		color: rgba(0, 0, 0, 0.7);      /* reset color: rgba(255, 255, 255, 0.7); in mobile ui/ux */
+		color: rgba(0, 0, 0, 0.7);      
 	}
 
 	.site__header nav ul li a:hover{
 		border-bottom: 0.2rem solid red;
 	}
-
-	/*:target{
-		padding-top: 6rem;
-	}*/
 
 	.home{
 		position: relative;
@@ -405,15 +401,13 @@ nav ul li a{
 	.home__info{
 		position: absolute;
 		top: 25%;
-		left: 10%;                      /* 15% */
-		right: 10%;                     /* 15% */
+		left: 10%;                      
+		right: 10%;                    
 	}
 
 	.home__info h1{
 		color: #ffffff;
 	}
-
-	/* BREAK here to serve all higher width */
 
 	.services{
 		margin-top: 4rem;
@@ -428,8 +422,6 @@ nav ul li a{
 	}
 
 	.services__item{
-		/* flex-grow: 1(grow), flex-shrink: 0(don't shrink), flex-basis: 28%(each flex-item width is 28%) 
-		   hence only 3 items per row because 28x3=84% and wrapper width is 96% i.e. difference is only 12% */
 		flex: 1 0 28%;  
 		margin: 2rem;
 	}
@@ -456,8 +448,6 @@ nav ul li a{
 	}
 
 	.gallery ul li{
-		/* flex-grow: 1(grow), flex-shrink: 1(shrink), flex-basis: 28%(each flex-item width is 28%) 
-		   hence only 3 items per row because 28x3=84% and wrapper width is 96% i.e. difference is only 12% */
 		flex: 1 1 28%;  
 		margin: 2rem;
 	}
@@ -476,14 +466,8 @@ nav ul li a{
 	}
 
 	.about__item{
-		/* flex-grow: 1(grow), flex-shrink: 0(don't shrink), flex-basis: 28%(each flex-item width is 28%) 
-		   hence only 3 items per row because 28x3=84% and wrapper width is 96% i.e. difference is only 12% */
 		flex: 1 0 28%;  
 		margin: 2rem;
-	}
-
-	.about__info{
-		/*margin-top: 6rem;*/
 	}
 
 	.contact{
@@ -500,10 +484,6 @@ nav ul li a{
 	}
 
 }
-
-/************************************************************************/
-/* invert css font-color depending on background-color => stackoverflow */
-/************************************************************************/
 
 /*=== MEDIA QUERY - 1024px ===*/
 @media screen and (min-width: 1024px) {
@@ -522,14 +502,8 @@ nav ul li a{
 	}
 
 	.services__item{
-		/* flex-grow: 1(grow), flex-shrink: 0(don't shrink), flex-basis: 28%(each flex-item width is 28%) 
-		   hence only 3 items per row because 28x3=84% and wrapper width is 96% i.e. difference is only 12% */
 		flex: 1 0 28%;  
 		margin: 2rem;
-	}
-
-	.services__info p{
-		/*margin-top: 6rem;*/
 	}
 
 	.services__info ul{
@@ -555,14 +529,8 @@ nav ul li a{
 	}
 
 	.about__item{
-		/* flex-grow: 1(grow), flex-shrink: 0(don't shrink), flex-basis: 28%(each flex-item width is 28%) 
-		   hence only 3 items per row because 28x3=84% and wrapper width is 96% i.e. difference is only 12% */
 		flex: 1 0 28%;  
 		margin: 2rem;
-	}
-
-	.about__info{
-		/*margin-top: 6rem;*/
 	}
 
 	.contact{
